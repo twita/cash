@@ -1,0 +1,20 @@
+module Parse
+
+   def parse_msg(data)
+       msg = Hash.new
+       data = data.split("|")
+       msg[:parse]=false 
+       return msg if data.length == 0
+       msg[:type]=data[0]
+       
+       case msg[:type]
+         when "MSG" then
+            msg[:parse] = true
+            msg[:msg] = data[1]
+         end
+       end
+      return msg
+   end
+
+
+end

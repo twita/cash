@@ -1,0 +1,9 @@
+class Client
+   attr :socket
+   attr :cid
+  
+   def initialize(socket)
+      @socket = socket
+   end
+
+end
